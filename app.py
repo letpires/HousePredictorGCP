@@ -7,6 +7,10 @@ from io import BytesIO
 from google.oauth2 import service_account
 
 # Path to the authentication JSON
+# Since we are not on Google Cloud, we need to have a service account to access the bucket
+# You can download the JSON file from the Google Cloud Console
+# https://console.cloud.google.com/iam-admin/serviceaccounts
+# The service account must have access to the bucket
 credentials = service_account.Credentials.from_service_account_file(
     "/Users/leticiapires/Desktop/HousePredictorGCP/talk-gdg-61fa935c78f1.json"
 )
